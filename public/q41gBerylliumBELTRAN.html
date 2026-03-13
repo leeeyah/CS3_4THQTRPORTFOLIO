@@ -105,7 +105,7 @@ button:hover{
 
 <div class="container">
 
-<h2>Add / Update a Movie</h2>
+<h2>Add a Movie</h2>
 
 <form id="movieForm">
 
@@ -233,7 +233,7 @@ form.addEventListener("submit", function(e){
     if(existingIndex !== -1){
 
         const oldRating = movies[existingIndex].rating;
-        const newRating = Math.round((oldRating + rating) / 2);
+
 
         movies[existingIndex] = {
             title,
