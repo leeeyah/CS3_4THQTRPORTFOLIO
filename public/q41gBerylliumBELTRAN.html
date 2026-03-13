@@ -105,7 +105,7 @@ button:hover{
 
 <div class="container">
 
-q<h2>Add / Update a Movie Rating</h2>
+<h2>Add / Update a Movie</h2>
 
 <form id="movieForm">
 
@@ -147,7 +147,7 @@ q<h2>Add / Update a Movie Rating</h2>
 
 <script>
 
-// 1. Initializes variables and selects necessary DOM elements
+// 1. Showcases important HTML elements (form, movie list container, and star rating elements)
 const form = document.getElementById("movieForm");
 const movieList = document.getElementById("movieList");
 const stars = document.querySelectorAll("#starContainer .star");
@@ -155,7 +155,7 @@ const stars = document.querySelectorAll("#starContainer .star");
 let rating = 0;
 
 
-// 2. Handles star rating selection by the user
+// 2. Detects when the user clicks a star and stores the user's rating
 stars.forEach(star=>{
     star.addEventListener("click", ()=>{
         rating = Number(star.dataset.value);
@@ -164,7 +164,7 @@ stars.forEach(star=>{
 });
 
 
-// 3. Updates the star display based on the user's selection
+// 3. Updates appearance of stars based on user's rating
 function updateStars(value){
     stars.forEach(star=>{
         if(Number(star.dataset.value) <= value){
@@ -176,7 +176,7 @@ function updateStars(value){
 }
 
 
-// 4. Displays the list of movies stored in localStorage, including their ratings
+// 4. Displays all movies stored in localStorage
 function displayMovies(){
 
     movieList.innerHTML="";
@@ -211,7 +211,7 @@ function displayMovies(){
 }
 
 
-// 6. Handles form submission to add or update a movie in localStorage
+// 6. Handles form submission to add new movie or update the existing one
 form.addEventListener("submit", function(e){
 
     e.preventDefault();
@@ -257,7 +257,7 @@ form.addEventListener("submit", function(e){
 });
 
 
-// 7. Allows users to delete a movie from the list
+// 7. Deletes movie after confirming with user
 function deleteMovie(index){
 
     const confirmDelete = confirm("Are you sure you want to delete this movie?");
@@ -276,7 +276,7 @@ function deleteMovie(index){
 }
 
 
-// Initial display of movies when page loads
+// 8. Shows saved movies when page opens
 displayMovies();
 
 </script>
