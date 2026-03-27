@@ -95,6 +95,7 @@ position: absolute positions the element to the nearest positioned ancestor, whi
 
 - Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?
 
+The z-index values determines which element goes on top and which on the bottom. If the z-index value is set to 1
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
